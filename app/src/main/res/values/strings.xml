@@ -101,7 +101,7 @@ JURISDICTION TO JURISDICTION.
     <string name="updates">
     </string>
 
-    <integer name="editTextConvertMaxLength">12</integer>
+    <integer name="editTextConvertMaxLength">15</integer>
     <integer name="tabHostCaptionFontSize">10</integer>
     <integer name="resultCalculatedDigitCount">20</integer>
 </resources>

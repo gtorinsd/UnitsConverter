@@ -107,7 +107,8 @@
                 android:layout_weight="1"
                 android:textSize="@dimen/EditTextSize"
                 android:background="@drawable/myframeborder"
-                android:padding="5dp" />
+                android:padding="5dp"
+                android:maxLength="@integer/editTextConvertMaxLength" />
             <TextView
                 android:layout_width="20dp"
                 android:layout_height="40dp" />

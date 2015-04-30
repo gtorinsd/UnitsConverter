@@ -142,9 +142,28 @@ public class ConverterFragment extends android.support.v4.app.Fragment
             {
                 m_EditTextResult.setText("");
                 String str = s.toString();
-                m_BtnCalculate.setEnabled(str.length() > 0);
+                boolean b = str.length() > 0;
+                if (b)
+                {
+                    b = CheckNumber(str);
+                }
+
+                m_BtnCalculate.setEnabled(b);
             }
         });
+    }
+
+    private boolean CheckNumber(String s)
+    {
+        try
+        {
+            double d = Double.parseDouble(s.toString());
+        }
+        catch(Exception E)
+        {
+            return false;
+        }
+        return true;
     }
 
     private void SetCalculateButtonOnClickListener(View view)
@@ -159,19 +178,8 @@ public class ConverterFragment extends android.support.v4.app.Fragment
                     int convertFrom = GetRadioGroupCheckedId(R.id.radioGroupUnitsFrom);
                     int convertTo = GetRadioGroupCheckedId(R.id.radioGroupUnitsTo);
 
-                    Double f;
-                    Double result;
-                    try
-                    {
-                        f = Double.parseDouble(m_EditTextConvert.getText().toString());
-                        result = converter.Calculate(convertFrom, convertTo, f);
-                    }
-                    catch (Exception E)
-                    {
-                        ExceptionMessageBox msg = new ExceptionMessageBox(getActivity());
-                        msg.Show("Exception", E.getMessage());
-                        return;
-                    }
+                    Double f = Double.parseDouble(m_EditTextConvert.getText().toString());
+                    Double result = converter.Calculate(convertFrom, convertTo, f);
 
                     // Generate displayed number format
                     int digitsCount = view.getResources().getInteger(R.integer.resultCalculatedDigitCount);
