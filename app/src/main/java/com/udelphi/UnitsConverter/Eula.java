@@ -49,7 +49,7 @@ public class Eula {
         if(!flShowed)
         {
             // Show the Eula
-            String title = m_Activity.getString(R.string.app_name) + " v " + versionInfo.versionName + " EULA";
+            String title = m_Activity.getString(R.string.app_name) + " " + versionInfo.versionName + " EULA";
             // Join "updates" and "eula", if "updates" resource are not empty
             String message = m_Activity.getString(R.string.eula);
             String updates = m_Activity.getString(R.string.updates).trim();

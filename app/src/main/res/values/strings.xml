@@ -1,7 +1,7 @@
 <resources>
     <!-- Application name -->
     <string name="app_name">UnitsConverter</string>
-    <string name="app_version">v 1.00</string>
+    <string name="app_version">v 1.1</string>
 
     <!-- MainActivity resources -->
     <string name="text_convertFrom">From:</string>
@@ -99,6 +99,8 @@ JURISDICTION TO JURISDICTION.
     </string>
 
     <string name="updates">
+        Updates:\n
+        - Fixed some bugs.\n
     </string>
 
     <integer name="editTextConvertMaxLength">15</integer>
