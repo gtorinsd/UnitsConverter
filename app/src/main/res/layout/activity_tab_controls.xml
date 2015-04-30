@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/TabControlsLayout"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/text_convertFrom"
+            android:id="@+id/textViewUnitsFrom"
+            android:textStyle="bold"
+            android:background="?colorPrimary"
+            android:textColor="@android:color/white"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/text_convertTo"
+            android:id="@+id/textViewUnitsTo"
+            android:gravity="center_horizontal"
+            android:background="?colorPrimary"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.03"
+        android:baselineAligned="false"
+        android:id="@+id/LayoutScrollViews">
+
+        <ScrollView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollViewFrom"
+            android:paddingRight="@dimen/FragmentScrollViewPadding"
+            android:focusableInTouchMode="false">
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/radioGroupUnitsFrom"
+                android:focusableInTouchMode="true"
+                android:clickable="false"
+                android:paddingLeft="25dp">
+            </RadioGroup>
+        </ScrollView>
+
+        <ScrollView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollViewTo"
+            android:layout_gravity="center_vertical">
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/radioGroupUnitsTo"
+                android:focusableInTouchMode="true"
+                android:paddingLeft="25dp">
+            </RadioGroup>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="1"
+        android:layout_weight="0.00">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8.45"
+            style="@style/AppTheme"
+            android:layout_margin="5dp">
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:inputType="numberDecimal"
+                android:id="@+id/editTextConvert"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/EditTextSize"
+                android:background="@drawable/myframeborder"
+                android:padding="5dp" />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="40dp" />
+
+            <EditText
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/editTextResult"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:background="@drawable/myframeborder"
+                android:textSize="@dimen/EditTextSize"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center_vertical"
+                android:padding="5dp"
+                android:editable="false"
+                android:enabled="true"
+                android:inputType="none"
+                android:scrollbars="horizontal"
+                android:focusable="false"
+                android:scrollHorizontally="true"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_btnCalculate"
+            android:id="@+id/btnCalculate"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            android:enabled="false"
+            android:layout_weight="0.41" />
+    </LinearLayout>
+</LinearLayout>

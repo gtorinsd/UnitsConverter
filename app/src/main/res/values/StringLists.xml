@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="ArrTabsCaptions">
+        <item>Data storage</item>
+        <item>Data speed</item>
+        <item>Temperature</item>
+        <item>...</item>
+    </string-array>
+
+    <string-array
+        name="ArrInformationUnits">
+        <item>Bit</item>
+        <item>Byte</item>
+        <item>Kilobyte</item>
+        <item>Megabyte</item>
+        <item>Gigabyte</item>
+        <item>Kilobit</item>
+        <item>Megabit</item>
+        <item>Gigabit</item>
+    </string-array>
+    <string-array
+        name="ArrSpeedUnits">
+        <item>Bit/s</item>
+        <item>Byte/s</item>
+        <item>Kilobyte/s</item>
+        <item>Megabyte/s</item>
+        <item>Gigabyte/s</item>
+        <item>Kilobit/s</item>
+        <item>Megabit/s</item>
+        <item>Gigabit/s</item>
+    </string-array>
+    <string-array
+        name="ArrTemperatureUnits">
+        <item>°C (Celsius)</item>
+        <item>°F (Fahrenheit)</item>
+        <item>K (Kelvin)</item>
+        <item>°Re (Réaumur)</item>
+    </string-array>
+</resources>
